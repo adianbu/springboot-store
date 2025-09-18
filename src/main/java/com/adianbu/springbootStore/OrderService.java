@@ -1,5 +1,8 @@
 package com.adianbu.springbootStore;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class OrderService {
     private PaymentService paymentService;
 
@@ -8,6 +11,5 @@ public class OrderService {
     }
     public void placeOrder(double amount){
         paymentService.processPayment(amount);
-
     }
 }
